@@ -51,27 +51,33 @@ body {
   --tokki-eye: #2f1f16;
   --tokki-cheek: #ffb7a5;
   --tokki-paw: #ffe3cc;
-  width: 172px;
-  height: 172px;
-  border-radius: 999px;
-  border: 3px solid #4b2f21;
+  width: 124px;
+  height: 124px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
   display: grid;
   place-items: center;
-  background: linear-gradient(180deg, #fff8e8, #ffdcbc);
-  cursor: pointer;
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+  cursor: grab;
   user-select: none;
-  transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 8px 24px rgba(67, 35, 20, 0.2);
+  line-height: 0;
+  transition: transform 0.2s ease, filter 0.2s ease;
 }
 
 .tokki-avatar:hover {
   transform: translateY(-2px) scale(1.01);
-  box-shadow: 0 11px 28px rgba(67, 35, 20, 0.26);
+}
+
+.tokki-avatar:active {
+  cursor: grabbing;
 }
 
 .tokki-avatar .tokki-asset {
-  width: 126px;
-  height: 126px;
+  width: 124px;
+  height: 124px;
   overflow: visible;
   animation: idle-float 2.6s ease-in-out infinite;
 }
@@ -433,12 +439,12 @@ body {
 
 @media (max-width: 640px) {
   .tokki-avatar {
-    width: 132px;
-    height: 132px;
+    width: 96px;
+    height: 96px;
   }
 
   .tokki-avatar .tokki-asset {
-    width: 110px;
-    height: 110px;
+    width: 96px;
+    height: 96px;
   }
 }
