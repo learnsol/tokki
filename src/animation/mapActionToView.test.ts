@@ -12,7 +12,9 @@ describe("mapActionToView", () => {
     });
 
     expect(view.label).toBe("Surprised");
-    expect(view.cssClass).toBe("surprised");
+    expect(view.assetId).toBe("rabbit_v1");
+    expect(view.stateClass).toBe("state-react-poke");
+    expect(view.toneClass).toBe("tone-surprised");
   });
 
   it("returns fallback view for unknown actions", () => {
@@ -25,6 +27,8 @@ describe("mapActionToView", () => {
     });
 
     expect(view.label).toBe("Idle");
-    expect(view.emoji).toBe("🐰");
+    expect(view.assetId).toBe("rabbit_v1");
+    expect(view.stateClass).toBe("state-idle-blink");
+    expect(view.toneClass).toBe("tone-idle");
   });
 });

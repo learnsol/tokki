@@ -3,9 +3,10 @@ import { expect, test } from "@playwright/test";
 test("tokki loads and changes action over time", async ({ page }) => {
   await page.goto("/");
 
-  const action = page.getByTestId("tokki-action");
-  await expect(action).toBeVisible();
+  const avatar = page.getByTestId("tokki-avatar");
+  await expect(avatar).toBeVisible();
 
+  const action = page.getByTestId("tokki-action");
   const initial = await action.textContent();
 
   await expect
@@ -16,7 +17,7 @@ test("tokki loads and changes action over time", async ({ page }) => {
 test("tokki reacts to poke interaction", async ({ page }) => {
   await page.goto("/");
 
-  await page.getByRole("button", { name: "Poke Tokki" }).click();
+  await page.getByTestId("tokki-avatar").click({ button: "right" });
 
   await expect(page.getByTestId("tokki-action")).toHaveText("react_poke");
   await expect(page.getByTestId("tokki-mood")).toHaveText("surprised");
