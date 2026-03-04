@@ -14,10 +14,12 @@
       {
         "label": "main",
         "title": "tokki",
-        "width": 460,
-        "height": 560,
+        "width": 240,
+        "height": 240,
         "resizable": false,
-        "decorations": true,
+        "decorations": false,
+        "transparent": true,
+        "shadow": false,
         "alwaysOnTop": true
       }
     ],
