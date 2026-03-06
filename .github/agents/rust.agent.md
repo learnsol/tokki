@@ -1,6 +1,6 @@
 ---
-description: 'Rust GPT-5.2-Codex coding beast mode for VS Code'
-model: GPT-5.2-Codex
+description: 'Rust claude-sonnet-4 coding beast mode for VS Code'
+model: claude-sonnet-4
 name: 'Rust Beast Mode'
 
 ---
